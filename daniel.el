@@ -1,3 +1,7 @@
+(setq keybindings-file "~/.emacs.d/keybindings.el")
+(load keybindings-file)
+
+
 ;;use Twilight color scheme
 (require 'color-theme)
 (eval-after-load "color-theme"
@@ -16,38 +20,6 @@
 	    		 '(2 "_NET_WM_STATE_MAXIMIZED_HORZ" 0))
 )
 (toggle-fullscreen)
-
-;;don't overwrite the Emacs Starter Kit init.el file when setting
-;;Emacs options via the customize-option and customize-group commands
-(setq custom-file "~/.emacs.d/custom.el")
-(load custom-file)
-
-;;enable use of control key sequence instead of alt key
-;;also, I don't use emacs for e-mail, so make control-x m
-;;act as the modifier sequence, rather than e-mail
-(global-set-key "\C-x\C-m" 'execute-extended-command)
-(global-set-key "\C-xm" 'execute-extended-command)
-(global-set-key "\C-c\C-m" 'execute-extended-command)
-(global-set-key "\C-cm" 'execute-extended-command)
-
-;;(global-set-key "\C-x\C-g" 'goto-line)
-(global-set-key "\C-xz" 'undo)
-(global-set-key "\C-z" 'undo)
-
-(global-set-key "\C-t" 'beginning-of-buffer)
-(global-set-key "\C-xt" 'end-of-buffer)
-
-(global-set-key "\C-w" 'backward-kill-word)
-(global-set-key "\C-x\C-k" 'kill-region)
-(global-set-key "\C-c\C-k" 'kill-region)
-
-(global-set-key "\M-s" 'isearch-forward-regexp)
-(global-set-key "\M-r" 'isearch-backward-regexp)
-
-(global-set-key "\M-i" 'indent-relative)
-
-;;assign macro execution to F5 key
-(global-set-key [f5] 'call-last-kbd-macro)
 
 ;;disable system beep
 (setq visible-bell t)
@@ -84,3 +56,10 @@
 (require 'ecb)
 (global-set-key [(f4)] 'ecb-activate)
 
+;;Omit this if using Emacs >22 or if not using git
+(setq load-path (cons (expand-file-name "/usr/share/doc/git-core/contrib/emacs") load-path))
+(require 'vc-git)
+(when (featurep 'vc-git) (add-to-list 'vc-handled-backends 'git))
+(require 'git)
+(autoload 'git-blame-mode "git-blame"
+  "Minor mode for incremental blame for Git." t)

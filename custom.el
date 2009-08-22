@@ -5,7 +5,8 @@
   ;; If there is more than one, they won't work right.
  '(ecb-layout-name "LeftTwoPane")
  '(ecb-options-version "2.32")
- '(ecb-source-path (quote ("(\"~/Development/MindLev/mindlev\" \"mindlev\")" "(\"~/Development/ISB/isbtools\" \"isbtools\")" "(\"~\" \"home\")")))
+ '(ecb-show-sources-in-directories-buffer (quote ("left7" "left13" "left14" "left15" "LeftTwoPane")))
+ '(ecb-source-path (quote ("~/Development/MindLev/mindlev" "~/Development/ISB/isbtools" "~")))
  '(ecb-tip-of-the-day nil)
  '(ecb-windows-width 0.25))
 (custom-set-faces
