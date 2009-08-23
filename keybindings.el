@@ -28,3 +28,8 @@
 
 ;;assign macro execution to F5 key
 (global-set-key [f5] 'call-last-kbd-macro)
+
+;;activate Emacs Code Browser with F4
+(global-set-key [f4] 'ecb-activate)
+;;deactivate Emacs Code Browser with shift F4
+(global-set-key [S-f4] 'ecb-deactivate)

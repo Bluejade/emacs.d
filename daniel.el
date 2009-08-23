@@ -54,7 +54,6 @@
 ;(global-font-lock-mode 1)
 
 (require 'ecb)
-(global-set-key [(f4)] 'ecb-activate)
 
 ;;Omit this if using Emacs >22 or if not using git
 (setq load-path (cons (expand-file-name "/usr/share/doc/git-core/contrib/emacs") load-path))
