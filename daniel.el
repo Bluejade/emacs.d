@@ -2,12 +2,12 @@
 
 
 ;; Ruby on Rails mode
-(let* ((this-file (or load-file-name buffer-file-name))
-       (this-dir (file-name-directory this-file))
-       (rails-path (concatenate 'string this-dir "daniel/rails-reloaded")))
-  (setq load-path (cons rails-path load-path)))
+;;(let* ((this-file (or load-file-name buffer-file-name))
+;;       (this-dir (file-name-directory this-file))
+;;       (rails-path (concatenate 'string this-dir "daniel/rails-reloaded")))
+;;  (setq load-path (cons rails-path load-path)))
 
-(require 'rails-autoload)
+;;(require 'rails-autoload)
 
 ;;(require 'snippet)
 ;;(require 'find-recursive)
