@@ -16,7 +16,9 @@
 ;; ;; Enable test-case-mode automatically when opening test files
 ;; (add-hook 'find-file-hook 'enable-test-case-mode-if-test)
 
-;; Cucumber mode
-(add-to-list 'load-path "~/.emacs.d/daniel/cucumber-mode")
-(autoload 'cucumber-mode "cucumber-mode" "Mode for editing cucumber files" t)
-(add-to-list 'feature-mode '("\.feature$" . cucumber-mode))
+;; feature-mode for cucumber
+(add-to-list 'load-path "~/.emacs.d/daniel/feature-mode")
+;; and load it
+(require 'feature-mode)
+(add-to-list 'auto-mode-alist '("\.feature$" . feature-mode))
+
