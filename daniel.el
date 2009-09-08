@@ -1,3 +1,7 @@
+(color-theme-twilight)
+(toggle-fullscreen)
+(setq keybindings-file (concat dotfiles-dir "keybindings.el"))
+(load keybindings-file 'noerror)
 (require 'ecb)
 
 ;;Omit this if using Emacs >22 or if not using git
@@ -17,7 +21,7 @@
 ;; (add-hook 'find-file-hook 'enable-test-case-mode-if-test)
 
 ;; feature-mode for cucumber
-(add-to-list 'load-path "~/.emacs.d/daniel/feature-mode")
+(add-to-list 'load-path (concat dotfiles-dir "daniel/feature-mode"))
 ;; and load it
 (require 'feature-mode)
 (add-to-list 'auto-mode-alist '("\.feature$" . feature-mode))
