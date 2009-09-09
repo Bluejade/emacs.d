@@ -12,6 +12,7 @@ README*
 dominating-file.el
 package.el
 init.el
+custom.el
 thumbs/*
 oddmuse/*
 .newsrc-dribble
