@@ -4,6 +4,19 @@
 (load keybindings-file 'noerror)
 (require 'ecb)
 
+;; ruby-insert-end was part of ruby-mode.el, but removed from the elpa
+;; version. Add it here because ruby electric mode requires it
+;; See comment by Phil Hagelberg in the following thread:
+;; http://groups.google.com/group/emacs-on-rails/browse_thread/thread/0ae87fc797822bf3?pli=1
+(defun ruby-insert-end ()
+  "Insert \"end\" at point and reindent current line."
+  (interactive)
+  (insert "end")
+  (ruby-indent-line t)
+  (end-of-line))
+(require 'ruby-electric)
+(add-hook 'ruby-mode-hook (lambda () (ruby-electric-mode t)))
+
 ;;Omit this if using Emacs >22 or if not using git
 ;; (setq load-path (cons (expand-file-name "/usr/share/doc/git-core/contrib/emacs") load-path))
 ;; (require 'vc-git)
