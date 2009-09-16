@@ -4,6 +4,9 @@
 (load keybindings-file 'noerror)
 (require 'ecb)
 
+;; Ruby electric mode interfered with auto indentation, so that
+;; hitting return left the cursor at the beginning of a line.
+;; Not sure why, but no time to look into it now.
 ;; ruby-insert-end was part of ruby-mode.el, but removed from the elpa
 ;; version. Add it here because ruby electric mode requires it
 ;; See comment by Phil Hagelberg in the following thread:
@@ -15,7 +18,7 @@
   (ruby-indent-line t)
   (end-of-line))
 (require 'ruby-electric)
-(add-hook 'ruby-mode-hook (lambda () (ruby-electric-mode t)))
+;; (add-hook 'ruby-mode-hook (lambda () (ruby-electric-mode t)))
 
 ;;Omit this if using Emacs >22 or if not using git
 ;; (setq load-path (cons (expand-file-name "/usr/share/doc/git-core/contrib/emacs") load-path))
