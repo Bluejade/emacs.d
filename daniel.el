@@ -2,6 +2,13 @@
 (toggle-fullscreen)
 (setq keybindings-file (concat dotfiles-dir "keybindings.el"))
 (load keybindings-file 'noerror)
+(require 'haml-mode)
+(setq auto-mode-alist
+      (append
+       '(("\\.haml\\'" . haml-mode))
+       auto-mode-alist))
+
+
 (require 'ecb)
 
 ;; Ruby electric mode interfered with auto indentation, so that
