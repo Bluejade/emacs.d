@@ -22,6 +22,16 @@
 (global-set-key "\C-x\C-n" 'other-window)
 ;;(global-set-key "\C-x n" 'other-window) C-x n always waits for
 ;;further input
+(global-set-key "\C-x\C-o" 'other-window)
+
+;; thanks to http://nex-3.com/posts/45-efficient-window-switching-in-emacs
+(defun select-previous-window ()
+  "Switch to the previous window" 
+  (interactive)
+  (select-window (previous-window)))
+(global-set-key "\C-x p" 'select-previous-window)
+(global-set-key "\C-x\C-p" 'select-previous-window)
+
 
 
 ;; shift-space was bound to something I never used, so often, when

@@ -1,5 +1,5 @@
-(color-theme-twilight)
-(toggle-fullscreen)
+;;(color-theme-twilight)
+;;(toggle-fullscreen)
 (setq keybindings-file (concat dotfiles-dir "keybindings.el"))
 (load keybindings-file 'noerror)
 (require 'haml-mode)
@@ -12,7 +12,7 @@
 
 
 
-(require 'ecb)
+;; (require 'ecb)
 
 ;; Ruby electric mode interfered with auto indentation, so that
 ;; hitting return left the cursor at the beginning of a line.
