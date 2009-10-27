@@ -29,7 +29,7 @@
   "Switch to the previous window" 
   (interactive)
   (select-window (previous-window)))
-(global-set-key "\C-x p" 'select-previous-window)
+(global-set-key "\C-xp" 'select-previous-window)
 (global-set-key "\C-x\C-p" 'select-previous-window)
 
 
