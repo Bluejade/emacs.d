@@ -17,6 +17,18 @@
 (global-set-key "\C-x\C-k" 'kill-region)
 (global-set-key "\C-c\C-k" 'kill-region)
 
+;;Make window navigation similar to screen (because 'n' is easier to
+;;reach than 'o') and I never use set-goal-column
+(global-set-key "\C-x\C-n" 'other-window)
+;;(global-set-key "\C-x n" 'other-window) C-x n always waits for
+;;further input
+
+
+;; shift-space was bound to something I never used, so often, when
+;; typing, I would throw a Lisp error because I was still holding down
+;; shift when I pressed the space bar
+(global-set-key (kbd "S-SPC") " ")
+
 ;;alredy set by the Emacs starter kit
 ;;(global-set-key "\M-s" 'isearch-forward-regexp)
 ;;(global-set-key "\M-r" 'isearch-backward-regexp)

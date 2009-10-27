@@ -3,10 +3,13 @@
 (setq keybindings-file (concat dotfiles-dir "keybindings.el"))
 (load keybindings-file 'noerror)
 (require 'haml-mode)
+
 (setq auto-mode-alist
       (append
        '(("\\.haml\\'" . haml-mode))
+       '(("\\.js\\'" . js2-mode))
        auto-mode-alist))
+
 
 
 (require 'ecb)
