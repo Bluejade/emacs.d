@@ -1,3 +1,8 @@
+;;colorize comment text
+(set-face-foreground 'font-lock-comment-face "red")
+;;colorize comment delimiter
+(set-face-foreground 'font-lock-comment-delimiter-face "red")
+
 ;;(color-theme-twilight)
 ;;(toggle-fullscreen)
 (setq keybindings-file (concat dotfiles-dir "keybindings.el"))
@@ -12,7 +17,7 @@
 
 
 
-(require 'ecb)
+;; (require 'ecb)
 
 ;; Ruby electric mode interfered with auto indentation, so that
 ;; hitting return left the cursor at the beginning of a line.
