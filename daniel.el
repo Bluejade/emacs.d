@@ -16,6 +16,9 @@
        auto-mode-alist))
 
 
+(require 'modeline-posn)
+(setq modelinepos-column-limit 80)
+(column-number-mode 1)
 
 ;; (require 'ecb)
 
