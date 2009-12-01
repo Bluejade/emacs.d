@@ -9,6 +9,9 @@
 (load keybindings-file 'noerror)
 (require 'haml-mode)
 
+;;avoid error when first opening Ruby files
+(require 'tramp-cmds)
+
 (setq auto-mode-alist
       (append
        '(("\\.haml\\'" . haml-mode))
@@ -17,8 +20,11 @@
 
 
 (require 'modeline-posn)
-(setq modelinepos-column-limit 80)
-(column-number-mode 1)
+(add-hook 'emacs-lisp-mode-hook (lambda () (setq modelinepos-column-limit 120)))
+(add-hook 'ruby-mode-hook (lambda () (setq modelinepos-column-limit 80)))
+(add-hook 'feature-mode-hook (lambda () (setq modelinepos-column-limit 300)))
+(add-hook 'haml-mode-hook (lambda () (setq modelinepos-column-limit 300)))
+
 
 ;; (require 'ecb)
 
@@ -29,13 +35,13 @@
 ;; version. Add it here because ruby electric mode requires it
 ;; See comment by Phil Hagelberg in the following thread:
 ;; http://groups.google.com/group/emacs-on-rails/browse_thread/thread/0ae87fc797822bf3?pli=1
-(defun ruby-insert-end ()
-  "Insert \"end\" at point and reindent current line."
-  (interactive)
-  (insert "end")
-  (ruby-indent-line t)
-  (end-of-line))
-(require 'ruby-electric)
+;; (defun ruby-insert-end ()
+;;   "Insert \"end\" at point and reindent current line."
+;;   (interactive)
+;;   (insert "end")
+;;   (ruby-indent-line t)
+;;   (end-of-line))
+;; (require 'ruby-electric)
 ;; (add-hook 'ruby-mode-hook (lambda () (ruby-electric-mode t)))
 
 ;;Omit this if using Emacs >22 or if not using git
