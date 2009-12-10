@@ -9,6 +9,7 @@
  '(ecb-source-path (quote ("~/Work/MindLev/mindlev" "~/Work/ISB/isbtools")))
  '(ecb-tip-of-the-day nil)
  '(ecb-windows-width 0.25)
+ '(fill-column 80)
  '(grep-find-ignored-directories (quote ("CVS" ".svn" "{arch}" ".hg" "_darcs" ".git" ".bzr" "vendor" "log"))))
 (custom-set-faces
   ;; custom-set-faces was added by Custom.
