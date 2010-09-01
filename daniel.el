@@ -50,3 +50,9 @@
 ;; and load it
 (require 'feature-mode)
 (add-to-list 'auto-mode-alist '("\.feature$" . feature-mode))
+
+
+;; word-counting function from http://www.neverfriday.com/sweetfriday/2008/06/emacs-tip-word-counting-with-a.html
+(defun count-words ()
+  (interactive)
+  (message "Word count: %s" (how-many "\\w+" (point-min) (point-max))))
