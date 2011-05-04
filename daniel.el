@@ -42,8 +42,8 @@
   (insert "end")
   (ruby-indent-line t)
   (end-of-line))
-(require 'ruby-electric)
-(add-hook 'ruby-mode-hook (lambda () (ruby-electric-mode t)))
+;; (require 'ruby-electric)
+;; (add-hook 'ruby-mode-hook (lambda () (ruby-electric-mode t)))
 
 ;; feature-mode for cucumber
 (add-to-list 'load-path (concat dotfiles-dir "daniel/feature-mode"))
